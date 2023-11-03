@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/teamNameTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Team Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/teamNameField"
+        app:layout_constraintStart_toStartOf="@+id/teamNameField"
+        app:layout_constraintTop_toBottomOf="@+id/teamNameField"
+        app:layout_constraintVertical_bias="0.015" />
+
+    <TextView
+        android:id="@+id/teamAddressTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Team Address"
+        app:layout_constraintEnd_toEndOf="@+id/teamAddressField"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/teamAddressField"
+        app:layout_constraintTop_toBottomOf="@+id/teamAddressField" />
+
+    <EditText
+        android:id="@+id/teamNameField"
+        android:layout_width="238dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:hint="(Please enter a team name)"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/avatarImage"
+        app:layout_constraintStart_toStartOf="@+id/avatarImage"
+        app:layout_constraintTop_toBottomOf="@+id/avatarImage" />
+
+    <EditText
+        android:id="@+id/teamAddressField"
+        android:layout_width="239dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="(Please enter a ZIP code)"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/teamNameTextField"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/teamNameTextField"
+        app:layout_constraintTop_toBottomOf="@+id/teamNameTextField" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:onClick="OnOpenInGoogleMaps"
+        android:text="OPEN IN GOOGLE MAPS"
+        app:layout_constraintEnd_toEndOf="@+id/teamAddressField"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="@+id/teamAddressField"
+        app:layout_constraintTop_toBottomOf="@+id/teamAddressField" />
+
+    <ImageView
+        android:id="@+id/avatarImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="132dp"
+        android:onClick="OnSetAvatarButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logo_00" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
